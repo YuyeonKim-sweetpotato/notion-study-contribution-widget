@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Contribution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+      <div>
+        <h1>Study Contribution</h1>
+        <p>공부한 시간을 잔디로 기록해보세요.</p>
+      </div>
+
+      <div class="total">
+        <span id="totalHours">0</span>
+        <small>hours</small>
+      </div>
+    </header>
+
+
+    <section class="contribution-wrapper">
+      <!-- 월(Month) 표시 영역 -->
+      <div class="month-labels" id="monthLabels"></div>
+
+      <div class="graph-area">
+        <!-- 요일 라벨 영역 -->
+        <div class="weekday-labels">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+
+        <!-- 잔디밭 그래프가 그려질 영역 -->
+        <div id="contributionGraph" class="contribution-graph"></div>
+      </div>
+    </section>
+
+
+    <div class="legend">
+      <span>Less</span>
+      <div class="legend-cell level-0"></div>
+      <div class="legend-cell level-1"></div>
+      <div class="legend-cell level-2"></div>
+      <div class="legend-cell level-3"></div>
+      <div class="legend-cell level-4"></div>
+      <div class="legend-cell level-5"></div>
+      <div class="legend-cell level-6"></div>
+      <div class="legend-cell level-7"></div>
+      <div class="legend-cell level-8"></div>
+      <div class="legend-cell level-9"></div>
+      <span>More</span>
+    </div>
+
+
+    <section class="info">
+      <div>
+        <strong id="selectedDate">날짜를 선택하세요</strong>
+        <span id="selectedTime">공부시간을 입력할 수 있습니다.</span>
+      </div>
+
+      <div class="input-area">
+        <input
+          type="number"
+          id="studyTime"
+          min="0"
+          step="0.5"
+          placeholder="공부시간"
+        >
+        <span>시간</span>
+        <button id="saveButton">저장</button>
+      </div>
+    </section>
+
+
+    <footer>
+      <button id="clearButton" class="clear-button">
+        전체 데이터 초기화
+      </button>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
